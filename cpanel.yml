@@ -1,5 +1,4 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/naretcot/public_html
-    - /bin/cp -R * $DEPLOYPATH
+    - /bin/bash /home/naretcot/public_html/naretwebsite/deploy.sh
