@@ -72,7 +72,7 @@ $clients = getClients();
         <div class="icon p-2 me-2">
             <img class="img-fluid" src="img/icon-deal.png" alt="Icon" style="width: 30px; height: 30px;">
         </div>
-        <span class="text-primary fw-bold" style="font-size: 1.5rem;">NARET COMPANY LIMITED</span>
+        <span class="text-primary fw-bold" style="font-size: 1rem;">NARET COMPANY LIMITED</span>
     </a>
 
     <!-- Toggle Button -->
