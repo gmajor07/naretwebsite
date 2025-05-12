@@ -73,6 +73,7 @@ $clients = getClients();
     <span class="text-primary fw-bold" style="font-size: 2rem;">NARET COMPANY LIMITED</span>
 </a>
 
+<br>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
