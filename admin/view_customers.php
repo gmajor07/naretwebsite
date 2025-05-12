@@ -8,7 +8,7 @@ if ($conn->connect_error) {
 }
 
 // Fetch customer registrations
-$customers = $conn->query("SELECT * FROM customers ORDER BY registered_at  DESC");
+$customers = $conn->query("SELECT * FROM web_customers ORDER BY registered_at  DESC");
 
 // Fetch email subscribers
 $subscribers = $conn->query("SELECT * FROM newsletter  ORDER BY subscribed_at  DESC");
