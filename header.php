@@ -17,6 +17,8 @@ $carouselImages = getCarouselImages();
 $services = getFeaturedServices();
 $recentWorks = getRecentWorks();
 $clients = getClients();
+$featuredVideo = getFeaturedVideo();
+
 ?>
 
 <!DOCTYPE html>
@@ -70,9 +72,9 @@ $clients = getClients();
     <!-- Brand (logo + name) -->
     <a href="index.php" class="navbar-brand d-flex align-items-center text-center mb-2 mb-sm-0">
         <div class="icon p-2 me-2">
-            <img class="img-fluid" src="img/icon-deal.png" alt="Icon" style="width: 30px; height: 30px;">
+            <img class="img-fluid" src="img/logo.png" alt="Icon" style="width: 100px; height: 80px;">
         </div>
-        <span class="text-primary fw-bold" style="font-size: 1rem;">NARET COMPANY LIMITED</span>
+        <span style="font-size: 1rem; color:#007bff;">NARET COMPANY LIMITED</span>
     </a>
 
     <!-- Toggle Button -->
@@ -103,45 +105,6 @@ $clients = getClients();
         <!-- Navbar End -->
 
 
-  <!-- CSS Styles -->
-<style>
-  .hero-section {
-    position: relative;
-    height: 700px; /* Adjust height as needed */
-    overflow: hidden;
-  }
-  
-  .hero-carousel .carousel-item {
-    height: 100%;
-    width: 100%;
-  }
-  
-  .hero-carousel img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .hero-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 2rem 0;
-    text-align: center;
-    color: white;
-    z-index: 2;
-  }
-  
-  .hero-overlay {
-    background-color: rgba(0,0,0,0.7);
-    padding: 2rem;
-    border-radius: 0.5rem 0.5rem 0 0;
-    max-width: 100%;
-    margin: 0 auto;
-    backdrop-filter: blur(2px);
-  }
-</style>
 
 <!-- HTML Structure -->
 <div class="hero-section">
@@ -177,6 +140,41 @@ $clients = getClients();
 </div>
 
 
+      <!-- NEW VIDEO SECTION BELOW THE HEADER -->
+        <?php if ($featuredVideo): ?>
+        <div class="video-section py-5 bg-light">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center mb-4">
+                        <h2 class="text-primary mb-3">Featured Video</h2>
+                        <p class="lead">Watch our latest video presentation</p>
+                    </div>
+                </div>
+                
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="ratio ratio-16x9 shadow-lg rounded-3 overflow-hidden">
+                            <iframe 
+                                src="https://www.youtube.com/embed/<?= htmlspecialchars($featuredVideo['youtube_id']) ?>?autoplay=1&mute=1&loop=1&playlist=<?= htmlspecialchars($featuredVideo['youtube_id']) ?>&controls=1&modestbranding=1&rel=0" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen
+                                class="youtube-embed">
+                            </iframe>
+                        </div>
+                        
+                        <div class="mt-4 text-center">
+                            <a href="videos.php" class="btn btn-outline-primary">
+                                <i class="fas fa-video me-2"></i> View More Videos
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php endif; ?>
 
 
 <br>
+
+

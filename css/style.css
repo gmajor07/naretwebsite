@@ -1,9 +1,9 @@
 /********** Template CSS **********/
 :root {
-    --primary: #00B98E;
-    --secondary: #FF6922;
-    --light: #EFFDF5;
-    --dark: #0E2E50;
+    --primary: #1a73e8;
+    --secondary: #4285f4;
+    --light: #e8f0fe;
+    --dark: #0d47a1;
 }
 
 .back-to-top {
@@ -13,7 +13,6 @@
     bottom: 45px;
     z-index: 99;
 }
-
 
 /*** Spinner ***/
 #spinner {
@@ -29,7 +28,6 @@
     opacity: 1;
 }
 
-
 /*** Button ***/
 .btn {
     transition: .5s;
@@ -38,6 +36,22 @@
 .btn.btn-primary,
 .btn.btn-secondary {
     color: #FFFFFF;
+}
+
+.btn.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn.btn-secondary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.btn.btn-primary:hover,
+.btn.btn-secondary:hover {
+    background-color: var(--dark);
+    border-color: var(--dark);
 }
 
 .btn-square {
@@ -65,7 +79,6 @@
     font-weight: normal;
     border-radius: 50px;
 }
-
 
 /*** Navbar ***/
 .nav-bar {
@@ -103,7 +116,7 @@
 .navbar-light .navbar-nav .nav-link {
     margin-right: 30px;
     padding: 25px 0;
-    color: #FFFFFF;
+    color: var(--dark);
     font-size: 15px;
     text-transform: uppercase;
     outline: none;
@@ -149,7 +162,6 @@
         opacity: 0;
         visibility: hidden;
         transition: .5s;
-        
     }
 
     .navbar .nav-item:hover .dropdown-menu {
@@ -159,7 +171,6 @@
         opacity: 1;
     }
 }
-
 
 /*** Header ***/
 @media (min-width: 992px) {
@@ -207,7 +218,6 @@
     color: #DDDDDD;
 }
 
-
 /*** Icon ***/
 .icon {
     padding: 15px;
@@ -218,7 +228,6 @@
     border-radius: 50px;
     border: 1px dashed var(--primary) !important;
 }
-
 
 /*** About ***/
 .about-img img {
@@ -238,11 +247,10 @@
     z-index: 1;
 }
 
-
 /*** Category ***/
 .cat-item div {
     background: #FFFFFF;
-    border: 1px dashed rgba(0, 185, 142, .3);
+    border: 1px dashed rgba(66, 133, 244, .3);
     transition: .5s;
 }
 
@@ -258,7 +266,6 @@
 .cat-item:hover div * {
     color: #FFFFFF !important;
 }
-
 
 /*** Property List ***/
 .nav-pills .nav-item .btn {
@@ -283,13 +290,12 @@
 }
 
 .property-item .border-top {
-    border-top: 1px dashed rgba(0, 185, 142, .3) !important;
+    border-top: 1px dashed rgba(66, 133, 244, .3) !important;
 }
 
 .property-item .border-end {
-    border-right: 1px dashed rgba(0, 185, 142, .3) !important;
+    border-right: 1px dashed rgba(66, 133, 244, .3) !important;
 }
-
 
 /*** Team ***/
 .team-item {
@@ -320,7 +326,6 @@
     color: var(--secondary) !important;
 }
 
-
 /*** Testimonial ***/
 .testimonial-carousel {
     padding-left: 1.5rem;
@@ -335,7 +340,7 @@
 }
 
 .testimonial-carousel .testimonial-item .border {
-    border: 1px dashed rgba(0, 185, 142, .3) !important;
+    border: 1px dashed rgba(66, 133, 244, .3) !important;
 }
 
 .testimonial-carousel .owl-nav {
@@ -368,7 +373,6 @@
 .testimonial-carousel .owl-nav .owl-next:hover {
     background: var(--dark);
 }
-
 
 /*** Footer ***/
 .footer .btn.btn-social {
@@ -438,3 +442,83 @@
     padding-right: 0;
     border-right: none;
 }
+
+
+.hero-section {
+    position: relative;
+    height: 700px; /* Adjust height as needed */
+    overflow: hidden;
+  }
+  
+  .hero-carousel .carousel-item {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .hero-carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 0;
+    text-align: center;
+    color: white;
+    z-index: 2;
+  }
+  
+  .hero-overlay {
+    background-color: rgba(0,0,0,0.7);
+    padding: 2rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    max-width: 100%;
+    margin: 0 auto;
+    backdrop-filter: blur(2px);
+  }
+
+
+
+.video-section {
+    padding: 5rem 0;
+    background: #f8f9fa;
+}
+
+.youtube-embed {
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.youtube-embed:hover {
+    transform: scale(1.01);
+}
+
+.rounded-3 {
+    border-radius: 0.5rem !important;
+}
+
+* Video controls */
+        .video-controls {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            z-index: 10;
+        }
+        
+        .btn-video-control {
+            background: rgba(0,0,0,0.7);
+            color: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 5px;
+            transition: all 0.3s;
+            border: none;
+        }

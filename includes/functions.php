@@ -330,3 +330,19 @@ function getHeaderContent($section = 'main') {
         return $defaultContent;
     }
 }
+
+
+
+function getFeaturedVideo() {
+    global $conn;
+    $sql = "SELECT * FROM videos WHERE is_featured = TRUE ORDER BY created_at DESC LIMIT 1";
+    $result = $conn->query($sql);
+    return $result->fetch_assoc();
+}
+
+function getVideos() {
+    global $conn;
+    $sql = "SELECT * FROM videos ORDER BY is_featured DESC, created_at DESC";
+    $result = $conn->query($sql);
+    return $result->fetch_all(MYSQLI_ASSOC);
+}

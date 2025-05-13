@@ -51,7 +51,7 @@
 <style>
     /* Custom Styles */
     .vision-mission-container {
-        background: linear-gradient(135deg,rgb(19, 164, 118) 0%,rgb(11, 215, 164) 100%);
+        background: linear-gradient(135deg,rgb(34, 76, 227) 0%,rgb(72, 43, 238) 100%);
     }
     
     .vision-card, .mission-card {

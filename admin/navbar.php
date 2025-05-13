@@ -36,6 +36,7 @@
                             <li><a class="dropdown-item" href="view_customers.php">View Customers</a></li>
                             <li><a class="dropdown-item" href="edit_header_content.php">Edit Headings</a></li>
                             <li><a class="dropdown-item" href="edit_deci_content.php">Edit Desiccants Header </a></li>
+                            <li><a class="dropdown-item" href="videos.php">Videos</a></li>
 
                         </ul>
                     </li>
