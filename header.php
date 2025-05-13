@@ -74,7 +74,7 @@ $featuredVideo = getFeaturedVideo();
         <div class="icon p-2 me-2">
             <img class="img-fluid" src="img/logo.png" alt="Icon" style="width: 100px; height: 80px;">
         </div>
-        <span style="font-size: 1rem; color:#007bff;">NARET COMPANY LIMITED</span>
+        <h1 class="m-0 text-primary">NARET COMPANY LIMITED</h1>
     </a>
 
     <!-- Toggle Button -->
