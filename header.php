@@ -74,7 +74,7 @@ $featuredVideo = getFeaturedVideo();
         <div class="icon p-2 me-2">
             <img class="img-fluid" src="img/logo.png" alt="Icon" style="width: 100px; height: 80px;">
         </div>
-        <h1 class="m-0 text-primary">NARET COMPANY LIMITED</h1>
+        <h1 class="m-0 text-primary" >NARET COMPANY LIMITED</h1>
     </a>
 
     <!-- Toggle Button -->
@@ -178,3 +178,14 @@ $featuredVideo = getFeaturedVideo();
 <br>
 
 
+<style>
+:root {
+  --primary: #3b82f6; /* Change this to your preferred blue (this is a Tailwind-like blue) */
+  /* --primary: #2563eb;  A darker blue alternative */
+  /* --primary: #1e40af;  Even darker blue */
+}
+
+.text-primary {
+  color: var(--primary);
+}
+    </style>

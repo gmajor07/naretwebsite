@@ -48,7 +48,7 @@ body {
     font-weight: 400;
     line-height: 1.5;
     color: #666565;
-    background-color: #eff4f9;
+    background-color: #EFFDF5;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0,0,0,0)
 }
@@ -7801,7 +7801,7 @@ textarea.form-control-lg {
 }
 
 .bg-light {
-    background-color: #d2dfe9 !important
+    background-color: #EFFDF5 !important
 }
 
 .bg-dark {
