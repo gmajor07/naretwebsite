@@ -176,16 +176,3 @@ $featuredVideo = getFeaturedVideo();
 
 
 <br>
-
-
-<style>
-:root {
-  --primary: #3b82f6; /* Change this to your preferred blue (this is a Tailwind-like blue) */
-  /* --primary: #2563eb;  A darker blue alternative */
-  /* --primary: #1e40af;  Even darker blue */
-}
-
-.text-primary {
-  color: var(--primary);
-}
-    </style>

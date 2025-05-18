@@ -40,29 +40,13 @@ $content = getPageContent('home');
     <?php include 'navbar.php'; ?>
     
     <div class="container mt-4">
-        <h2>Manage Home Page Content</h2>
+        <h2>Manage Vision & Mission Content</h2>
         
         <?php if (isset($success)): ?>
         <div class="alert alert-success"><?php echo $success; ?></div>
         <?php endif; ?>
         
         <form method="POST">
-            <div class="card mb-4">
-                <div class="card-header">Header Section</div>
-                <div class="card-body">
-                    <div class="mb-3">
-                        <label class="form-label">Header Title</label>
-                        <input type="text" class="form-control" name="titles[header_title]" 
-                               value="<?php echo htmlspecialchars($content['header_title'] ?? ''); ?>">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Header Text</label>
-                        <textarea class="form-control" name="content[header_text]" rows="3"><?php 
-                            echo htmlspecialchars($content['header_text'] ?? ''); 
-                        ?></textarea>
-                    </div>
-                </div>
-            </div>
             
             <div class="card mb-4">
                 <div class="card-header">Vision & Mission</div>
@@ -82,22 +66,6 @@ $content = getPageContent('home');
                 </div>
             </div>
             
-            <div class="card mb-4">
-                <div class="card-header">Services Section</div>
-                <div class="card-body">
-                    <div class="mb-3">
-                        <label class="form-label">Services Title</label>
-                        <input type="text" class="form-control" name="titles[services_title]" 
-                               value="<?php echo htmlspecialchars($content['services_title'] ?? ''); ?>">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Services Subtitle</label>
-                        <textarea class="form-control" name="content[services_subtitle]" rows="3"><?php 
-                            echo htmlspecialchars($content['services_subtitle'] ?? ''); 
-                        ?></textarea>
-                    </div>
-                </div>
-            </div>
             
             <button type="submit" class="btn btn-primary">Save Changes</button>
         </form>
