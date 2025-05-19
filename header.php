@@ -69,13 +69,51 @@ $featuredVideo = getFeaturedVideo();
         <div class="container-fluid nav-bar bg-transparent">
             <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
        <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between w-100">
-    <!-- Brand (logo + name) -->
-    <a href="index.php" class="navbar-brand d-flex align-items-center text-center mb-2 mb-sm-0">
-        <div class="icon p-2 me-2">
-            <img class="img-fluid" src="img/logo.png" alt="Icon" style="width: 100px; height: 80px;">
-        </div>
-        <h1 class="m-0 text-primary" >NARET COMPANY LIMITED</h1>
-    </a>
+  <!-- Brand (logo + name) -->
+<a href="index.php" class="navbar-brand d-flex align-items-center text-center mb-2 mb-sm-0">
+    <!-- Logo container with both logos -->
+    <div class="icon p-2 me-2" style="position: relative; width: 100px; height: 80px;">
+        <img class="img-fluid logo-main" src="img/logo.png" alt="Naret Logo" style="width: 100px; height: 80px; position: absolute; transition: opacity 0.5s ease-in-out;">
+        <img class="img-fluid logo-fumigation" src="img/fumigation.png" alt="Fumigation Logo" style="width: 100px; height: 80px; position: absolute; opacity: 0; transition: opacity 0.5s ease-in-out;">
+    </div>
+    
+    <!-- Text container with both company names -->
+    <div style="position: relative; height: 60px;">
+        <h1 class="m-0 text-primary text-main">NARET COMPANY LIMITED</h1>
+        <h1 class="m-0 text-primary text-fumigation" style="position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s ease-in-out;">FUMIGATION COMPANY</h1>
+    </div>
+</a>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        function toggleBrand() {
+            // Toggle logos
+            const logoMain = document.querySelector('.logo-main');
+            const logoFumigation = document.querySelector('.logo-fumigation');
+            
+            // Toggle texts
+            const textMain = document.querySelector('.text-main');
+            const textFumigation = document.querySelector('.text-fumigation');
+            
+            if(logoMain.style.opacity !== '0') {
+                // Switch to fumigation version
+                logoMain.style.opacity = '0';
+                logoFumigation.style.opacity = '1';
+                textMain.style.opacity = '0';
+                textFumigation.style.opacity = '1';
+            } else {
+                // Switch to main version
+                logoMain.style.opacity = '1';
+                logoFumigation.style.opacity = '0';
+                textMain.style.opacity = '1';
+                textFumigation.style.opacity = '0';
+            }
+        }
+        
+        // Change every 4 seconds (4000 milliseconds)
+        setInterval(toggleBrand, 4000);
+    });
+</script>
 
     <!-- Toggle Button -->
     <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">

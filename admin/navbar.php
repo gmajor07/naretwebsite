@@ -25,11 +25,6 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="edit_header_content.php">Edit Headings</a></li>
                             <li><a class="dropdown-item" href="manage_content.php">Vision & Mission</a></li>
-                            <li><a class="dropdown-item" href="manage_client_images.php">Manage Clients Images</a></li>
-                            <li><a class="dropdown-item" href="manage_services_category.php">Manage Category</a></li>
-                            <li><a class="dropdown-item" href="manage_fumigation.php">Manage Fumigation</a></li>
-                            <li><a class="dropdown-item" href="manage_deci.php">Manage Container Desiccants</a></li>
-                            <li><a class="dropdown-item" href="edit_deci_content.php">Edit Desiccants Header </a></li>
                             <li><a class="dropdown-item" href="videos.php">Videos</a></li>
 
                         </ul>
@@ -43,8 +38,6 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="manage_cta_image.php">Call-to-Action Images</a></li>
                             <li><a class="dropdown-item" href="manage_cta_content.php">Call-to-Action Content</a></li>
-                    
-
                         </ul>
                     </li>
 
@@ -72,8 +65,6 @@
                             <li><a class="dropdown-item" href="manage_fumigation.php">Manage Fumigation</a></li>
                             <li><a class="dropdown-item" href="manage_deci.php">Manage Container Desiccants</a></li>
                             <li><a class="dropdown-item" href="edit_deci_content.php">Edit Desiccants Header </a></li>
-                            <li><a class="dropdown-item" href="videos.php">Videos</a></li>
-
                         </ul>
                     </li>
                     <li class="nav-item">
