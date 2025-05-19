@@ -67,8 +67,17 @@
                             <li><a class="dropdown-item" href="edit_deci_content.php">Edit Desiccants Header </a></li>
                         </ul>
                     </li>
+
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            Admin Panel
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="changepass.php">Change Password</a></li>
+                            <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="logout.php">Logout</a>
                     </li>
                 </ul>
             </div>
