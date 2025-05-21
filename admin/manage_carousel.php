@@ -28,41 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
     } elseif (isset($_POST['update_carousel'])) {
         
-        function handleImageUpload($inputName, $targetDir) {
-            // Check if file was uploaded
-            if (!isset($_FILES[$inputName]) || $_FILES[$inputName]['error'] !== UPLOAD_ERR_OK) {
-                throw new Exception("File upload failed");
-            }
-        
-            // Validate image type
-            $allowedTypes = ['image/jpeg', 'image/png', 'image/webp'];
-            $fileInfo = finfo_open(FILEINFO_MIME_TYPE);
-            $mimeType = finfo_file($fileInfo, $_FILES[$inputName]['tmp_name']);
-            
-            if (!in_array($mimeType, $allowedTypes)) {
-                throw new Exception("Only JPG, PNG, and WEBP images are allowed");
-            }
-        
-            // Create directory if it doesn't exist
-            if (!file_exists($targetDir)) {
-                mkdir($targetDir, 0755, true);
-            }
-        
-            // Generate unique filename
-            $extension = pathinfo($_FILES[$inputName]['name'], PATHINFO_EXTENSION);
-            $filename = 'carousel_' . uniqid() . '.' . $extension;
-            $targetPath = $targetDir . $filename;
-        
-            // Move uploaded file
-            if (!move_uploaded_file($_FILES[$inputName]['tmp_name'], $targetPath)) {
-                throw new Exception("Failed to move uploaded file");
-            }
-        
-            // Return path without leading slash or ../
-            $webPath = str_replace(['../', '//'], '', $targetPath);
-            return $webPath; // e.g. "assets/img/carousel/carousel_642ba3c7.jpg"
-        }
-        
+       
         // Update existing carousel item
         $id = (int)$_POST['id'];
         $altText = trim($_POST['alt_text']);
