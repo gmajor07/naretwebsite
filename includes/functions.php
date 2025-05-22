@@ -219,16 +219,16 @@ function getClients() {
     return $clients;
 }
 
-function getAboutImage() {
+function getAllAboutImages() {
     global $conn;
-    $result = $conn->query("SELECT image_path FROM about_images ORDER BY uploaded_at DESC LIMIT 1");
-    return $result->fetch_assoc()['image_path'] ?? 'img/about.jpg';
+    $result = $conn->query("SELECT image_path FROM about_images ORDER BY uploaded_at DESC");
+    return $result->fetch_all(MYSQLI_ASSOC);
 }
 
-function getCtaImage() {
+function getAllCtaImages() {
     global $conn;
-    $result = $conn->query("SELECT image_path FROM cta_images ORDER BY uploaded_at DESC LIMIT 1");
-    return $result->fetch_assoc()['image_path'] ?? 'img/call-to-action.jpg';
+    $result = $conn->query("SELECT image_path FROM cta_images ORDER BY uploaded_at DESC");
+    return $result->fetch_all(MYSQLI_ASSOC);
 }
 
 function handleImageUpload($inputName, $targetDir) {

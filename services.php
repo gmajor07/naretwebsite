@@ -29,7 +29,6 @@ $servicesContent = getSectionContent('home', 'services');
     </div>
     <?php endforeach; ?>
 </div>
-
                 
             </div>
         </div>

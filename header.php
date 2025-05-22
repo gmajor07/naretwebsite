@@ -79,8 +79,8 @@ $featuredVideo = getFeaturedVideo();
     
     <!-- Text container with both company names -->
     <div style="position: relative; height: 60px;">
-        <h1 class="m-0 text-primary text-main">NARET COMPANY LIMITED</h1>
-        <h1 class="m-0 text-primary text-fumigation" style="position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s ease-in-out;">FUMIGATION AND CLEANNES</h1>
+        <h2 class="m-0 text-primary text-main">NARET COMPANY LIMITED</h2>
+        <h2 class="m-0 text-primary text-fumigation" style="position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s ease-in-out;">FUMIGATION AND CLEANNES</h2>
     </div>
 </a>
 
